@@ -1,4 +1,6 @@
 import java.time.Duration;
+// acted like i added a library
+//dette er for testing
 /**
  * Write a description of class AdvertisingJingle here.
  * 
