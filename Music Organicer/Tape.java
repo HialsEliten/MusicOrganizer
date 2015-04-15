@@ -34,6 +34,19 @@ public class Tape extends ArchivedMedium
     {
         tapeTracks.add(track);
     }
+    /**
+     * get the type of tape
+     * @return type
+     */
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
+    
   
     
 
