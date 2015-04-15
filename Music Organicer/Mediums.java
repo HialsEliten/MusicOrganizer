@@ -14,10 +14,9 @@ public class Mediums
     /**
      * Constructor for objects of class Medium
      */
-    public Mediums()
+    public Mediums(String title)
     {
-        // initialise instance variables
-        
+        this.title = title;
     }
 
     /**
