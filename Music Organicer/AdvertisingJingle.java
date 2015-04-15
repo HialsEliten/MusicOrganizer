@@ -19,9 +19,7 @@ public class AdvertisingJingle extends AudioTracks
         
         // Olav er superawesome
         // Kelvin er superawesomere
-        // Dick in but er Olavs helgehobby
-
-        
+        // Dick in butt er Olavs helgehobby 
         
         
     }
