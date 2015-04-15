@@ -20,11 +20,12 @@ public class AdvertisingJingle extends AudioTracks
         // Olav er superawesome
         // Kelvin er superawesomere
         // Dick in but er Olavs helgehobby
-        
 
         
         
+        
     }
+    
 
     /**
      * An example of a method - replace this comment with your own
@@ -36,5 +37,7 @@ public class AdvertisingJingle extends AudioTracks
     {
         // put your code here
         return x + y;
+        //habalabalaba
+        //dklfjdklfklsjfkl
     }
 }
