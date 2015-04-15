@@ -1,3 +1,4 @@
+import java.time.Duration;
 
 /**
  * Write a description of class SoundEffects here.
@@ -13,7 +14,7 @@ public class SoundEffects extends AudioTracks
     /**
      * Constructor for objects of class SoundEffects
      */
-    public SoundEffects(String title, Duration duration )
+    public SoundEffects(String title, Duration duration)
     {   
         super(title, duration);
         
