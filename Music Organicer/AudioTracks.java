@@ -10,6 +10,7 @@ public class AudioTracks
     // instance variables
     private String title;
     private Duration duration;
+    private int x;
     //private REFERANSE!!!!!!!!!!!!!!!!!!!!!
 
     /**
