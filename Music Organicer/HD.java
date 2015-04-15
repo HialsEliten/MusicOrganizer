@@ -1,33 +1,82 @@
 
 /**
- * Write a description of class HD here.
+ * HD class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @HialsEliten
+ * @10.04.15
  */
 public class HD extends Mediums
 {
     // instance variables - replace the example below with your own
-    private int x;
-
+    private String fileName;
+    private String pathToFile;
+    private int fileSize;
+    
     /**
      * Constructor for objects of class HD
      */
-    public HD()
+    public HD(String title, String fileName, String pathToFile, int fileSize)
     {
         // initialise instance variables
-        x = 0;
+        super(title);
+        this.fileName = fileName;
+        this.pathToFile = pathToFile;
+        this.fileSize = fileSize;
+        
+    }
+    
+    /**
+     * Returns file name.
+     * 
+     * @return      fileName
+     */
+    public String getFileName() {
+        return fileName;
+    }
+    
+    /**
+     * sets new file name.
+     * 
+     * @param       fileName 
+     */
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+    
+    /**
+     * returns a path to the file.
+     * 
+     * @return      pathToFile
+     */
+    public String getPathToFile() {
+        return pathToFile;
+    }
+    
+    /**
+     * Sets a path to the file.
+     * 
+     * @param       pathToFile 
+     */
+    public void setPathToFile(String pathToFile) {
+        this.pathToFile = pathToFile;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * returns the file size in kilo bytes.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @return      fileSize
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int getFileSize() {
+        return fileSize;
     }
+
+    /**
+     * Sets a new file size in kilo bytes.
+     * 
+     * @param       fileSize 
+     */
+    public void setFileSize(int fileSize) {
+        this.fileSize = fileSize;
+    }
+    
 }
