@@ -9,6 +9,7 @@ public class CD extends Mediums
 {
     // instance variables - replace the example below with your own
     private int x;
+    //Dette er bare for testing.
 
     /**
      * Constructor for objects of class CD
