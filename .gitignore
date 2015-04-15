@@ -20,6 +20,8 @@ $RECYCLE.BIN/
 # Class files
 *.class
 
+*.ctxt
+
 # =========================
 # Operating System Files
 # =========================
