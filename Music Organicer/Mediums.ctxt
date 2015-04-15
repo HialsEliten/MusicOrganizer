@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Mediums()
+comment0.params=title
+comment0.target=Mediums(java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Medium\r\n
 comment1.params=y
 comment1.target=void\ sampleMethod(int)
