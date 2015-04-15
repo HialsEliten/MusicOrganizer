@@ -17,6 +17,8 @@ public class AdvertisingJingle extends AudioTracks
     {   
         super(title, duration);
         
+        // Olav er superawesome
+        
         
     }
 
