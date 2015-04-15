@@ -1,33 +1,53 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Archive here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Kelvin
+ * @15.04.15
  */
 public class Archive
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Medium> archiveList;
 
     /**
      * Constructor for objects of class Archive
      */
     public Archive()
     {
-        // initialise instance variables
-        x = 0;
+        archiveList = new ArrayList<Medium>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * add new medium to archive list
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param  newMedium   a new medium (Medium) 
      */
-    public int sampleMethod(int y)
+    public void addMedium(Medium newMedium)
     {
-        // put your code here
-        return x + y;
+        this.archiveList.add(newMedium);
     }
+    
+    /**
+     * Remove medium from archive list
+     * 
+     * @param  mediumToRemove the medium to remove (Medium)
+     */
+    public void removeMedium(Medium mediumToRemove)
+    {
+        this.archiveList.remove(mediumToRemove);
+    }
+    
+    /**
+     * Return archive list
+     * 
+     * @Return archiveList the list of mediums in archive (ArrayList<Medium>)
+     */
+    public ArrayList<Medium> getMediumList(Medium mediumToRemove)
+    {
+        return this.archiveList;
+    }
+    
+    
 }
