@@ -1,6 +1,4 @@
 import java.time.Duration;
-// acted like i added a library
-//dette er for testing
 /**
  * Write a description of class AdvertisingJingle here.
  * 
@@ -17,13 +15,7 @@ public class AdvertisingJingle extends AudioTracks
      */
     public AdvertisingJingle(String title, Duration duration )
     {   
-        super(title, duration);
-        
-        // Olav er superawesome
-        // Kelvin er superawesomere
-        // Dick in butt er Olavs helgehobby 
-        
-        
+        super(title, duration);  
     }
     
 
@@ -35,9 +27,6 @@ public class AdvertisingJingle extends AudioTracks
      */
     public int sampleMethod(int y)
     {
-        // put your code here
         return x + y;
-        //habalabalaba
-        //dklfjdklfklsjfkl
     }
 }
