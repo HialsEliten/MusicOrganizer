@@ -13,10 +13,9 @@ public class Tape extends Mediums
     /**
      * Constructor for objects of class Tape
      */
-    public Tape()
+    public Tape(String title)
     {
-        // initialise instance variables
-        x = 0;
+        super(title);
     }
 
     /**
@@ -25,9 +24,5 @@ public class Tape extends Mediums
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }
