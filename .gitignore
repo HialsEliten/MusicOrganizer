@@ -20,6 +20,9 @@ $RECYCLE.BIN/
 # Class files
 *.class
 
+# BlueJ files
+*.bluej
+
 # =========================
 # Operating System Files
 # =========================
