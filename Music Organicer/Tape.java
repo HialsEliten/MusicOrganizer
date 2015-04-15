@@ -1,23 +1,22 @@
 
 /**
- * Write a description of class Medium here.
+ * Write a description of class Tape here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mediums
+public class Tape extends Mediums
 {
     // instance variables - replace the example below with your own
-    private String title;
-    
+    private int x;
 
     /**
-     * Constructor for objects of class Medium
+     * Constructor for objects of class Tape
      */
-    public Mediums()
+    public Tape()
     {
         // initialise instance variables
-        
+        x = 0;
     }
 
     /**
@@ -26,8 +25,9 @@ public class Mediums
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void sampleMethod(int y)
+    public int sampleMethod(int y)
     {
-        //lkj
+        // put your code here
+        return x + y;
     }
 }
