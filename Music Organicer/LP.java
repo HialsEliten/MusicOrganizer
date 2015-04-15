@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LP extends Mediums
+public class LP extends ArchivedMedium
 {
     // instance variables - replace the example below with your own
     private String artist;
@@ -67,7 +67,5 @@ public class LP extends Mediums
     public void setRecordLabel(String recordLabel) {
         this.recordLabel = recordLabel;
     }
-
-    
     
 }

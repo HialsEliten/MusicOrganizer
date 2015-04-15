@@ -2,13 +2,12 @@
 /**
  * Write a description of class Tape here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Kelvin 
+ * @15.04.15
  */
-public class Tape extends Mediums
+public class Tape extends ArchivedMedium
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
 
     /**
      * Constructor for objects of class Tape

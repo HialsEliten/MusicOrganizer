@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Mediums
+public class Medium
 {
     // instance variables - replace the example below with your own
     private String title;
@@ -13,7 +13,7 @@ public class Mediums
     /**
      * Constructor for objects of class Medium
      */
-    public Mediums(String title)
+    public Medium(String title)
     {
         this.title = title;
     }

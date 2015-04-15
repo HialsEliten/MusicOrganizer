@@ -5,7 +5,7 @@
  * @Kelvin og ikke Olav 
  * @15.04.15
  */
-public class HD extends Mediums
+public class HD extends Medium
 {
     // instance variables - replace the example below with your own
     private String filename;

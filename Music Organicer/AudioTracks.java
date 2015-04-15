@@ -19,7 +19,7 @@ public class AudioTracks
     public AudioTracks(String title, Duration duration)
     {
         this.title = title;
-        this.duration = duration;
+        //this.duration;
     }
 
     /**
