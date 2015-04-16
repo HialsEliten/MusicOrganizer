@@ -1,5 +1,8 @@
 #BlueJ class context
-comment0.params=title
-comment0.target=Tape(java.lang.String)
+comment0.params=title\ type
+comment0.target=Tape(java.lang.String,\ java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tape\r\n
-numComments=1
+comment1.params=track
+comment1.target=void\ addTrack(AudioTracks)
+comment1.text=\r\n\ Add\ a\ track\ to\ the\ end\ of\ the\ tracklist.\ \r\n\ @param\ track\r\n
+numComments=2
