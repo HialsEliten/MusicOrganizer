@@ -26,7 +26,7 @@ public class MediumArchive
      * 
      * @param  newMedium   a new medium (Medium) 
      */
-    public void addMedium(Medium newMedium, int archiveNumber)
+    public void addMedium(Medium newMedium)
     {
         this.mediumArchive.add(newMedium);
     }

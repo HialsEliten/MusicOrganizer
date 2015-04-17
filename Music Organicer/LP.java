@@ -11,13 +11,18 @@ public class LP extends Medium
     private String artist;
     private int releaseYear;
     private String recordLabel;
+    private int archiveNumber;
 
     /**
      * Constructor for objects of class LP
      */
-    public LP(String title, String artist, int releaseYear, String recordLabel)
+    public LP(String title, String artist, int releaseYear, String recordLabel, int archiveNumber)
     {
         super(title);
+        this.artist = artist;
+        this.releaseYear = releaseYear;
+        this.recordLabel = recordLabel;
+        this.archiveNumber = archiveNumber;
     }
 
     /**
@@ -67,5 +72,21 @@ public class LP extends Medium
     public void setRecordLabel(String recordLabel) {
         this.recordLabel = recordLabel;
     }
+/**
+     * set archive number
+     * @return archiveNumber
+     */
+    public int getArchiveNumber() {
+        return archiveNumber;
+    }
+/**
+     * set the archive number
+     * @param archiveNumber 
+     */
+    public void setArchiveNumber(int archiveNumber) {
+        this.archiveNumber = archiveNumber;
+    }
+    
+    
     
 }

@@ -12,6 +12,7 @@ public class CD extends Medium
     private int releaseYear;
     private String recordLabel;
     private int duration;
+    private int archiveNumber;
     
     
 
@@ -21,6 +22,10 @@ public class CD extends Medium
     public CD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
     {
         super(title);
+        this.artist = artist;
+        this.releaseYear = releaseYear;
+        this.archiveNumber = archiveNumber;
+        this.duration = duration;
     }
 
     /**
@@ -70,5 +75,15 @@ public class CD extends Medium
     public void setRecordLabel(String recordLabel) {
         this.recordLabel = recordLabel;
     }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+    
+    
 }
     

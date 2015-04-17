@@ -2,7 +2,7 @@
 /**
  * Hard Disc Class
  * 
- * @Kelvin og ikke Olav 
+ * @Mest Olav, litt Kelvin 
  * @15.04.15
  */
 public class HD extends Medium
@@ -64,7 +64,7 @@ public class HD extends Medium
     }
 
     /**
-     * Set fileSize
+     * Set fileSize in kB
      * @param fileSize
      */
     public void setFileSize(int fileSize) {
