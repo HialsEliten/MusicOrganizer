@@ -19,6 +19,7 @@ public class AudioTrack
     public AudioTrack(String title, Duration duration, Medium medium)
     {
         this.title = title;
+        this.medium = medium;
         //this.duration;
     }
 
@@ -43,6 +44,16 @@ public class AudioTrack
     }
     
     /**
+     * Returns the medium referance of the track
+     * 
+     * @return     medium   referance to medium
+     */
+    public Medium getMedium()
+    {
+        return medium;
+    }
+    
+    /**
      * Set new title
      * 
      * @param   newTitle
@@ -60,6 +71,16 @@ public class AudioTrack
     public void setDuration(Duration newDuration)
     {
         this.duration = newDuration;
+    }
+    
+    /**
+     * Set new medium referance
+     * 
+     * @param   newMedium
+     */
+    public void setMedium(Medium newMedium)
+    {
+        this.medium = newMedium;
     }
     
 }
