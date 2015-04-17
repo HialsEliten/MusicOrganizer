@@ -11,12 +11,12 @@ public class AudioTracks
     private String title;
     private Duration duration;
     private int x;
-    //private REFERANSE!!!!!!!!!!!!!!!!!!!!!
+    private Medium medium;
 
     /**
      * Constructor for objects of class AudioTracks
      */
-    public AudioTracks(String title, Duration duration)
+    public AudioTracks(String title, Duration duration, Medium medium)
     {
         this.title = title;
         //this.duration;

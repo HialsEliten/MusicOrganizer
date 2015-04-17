@@ -1,4 +1,4 @@
-
+import java.time.Duration;
 /**
  * Write a description of class CD here.
  * 
@@ -11,11 +11,14 @@ public class CD extends ArchivedMedium
     private String artist;
     private int releaseYear;
     private String recordLabel;
+    private int duration;
+    
+    
 
     /**
      * Constructor for objects of class CD
      */
-    public CD(String title, String artist, int releaseYear, String recordLabel)
+    public CD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
     {
         super(title);
     }
