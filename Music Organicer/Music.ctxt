@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=title\ duration\ artist\ date\ timesPlayed\ mediumContaining
+comment0.params=title\ duration\ artist\ date\ timesPlayed\ medium
 comment0.target=Music(java.lang.String,\ java.time.Duration,\ java.lang.String,\ int,\ int,\ Medium)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Music\r\n
 comment1.params=
@@ -20,10 +20,4 @@ comment5.text=\r\n\ Returns\ the\ number\ of\ times\ the\ music\ track\ is\ play
 comment6.params=timesPlayed
 comment6.target=void\ setTimesPlayed(int)
 comment6.text=\r\n\ Sets\ the\ number\ of\ times\ the\ music\ track\ is\ played.\r\n\ \r\n\ @param\ \ \ \ \ \ \ timesPlayed.\r\n
-comment7.params=
-comment7.target=Medium\ getMediumContaining()
-comment7.text=\r\n\ Returns\ the\ reference\ to\ medium\ of\ music\ track.\r\n\ \r\n\ @return\ \ \ \ \ \ mediumContaining.\r\n
-comment8.params=mediumContaining
-comment8.target=void\ setMediumContaining(Medium)
-comment8.text=\r\n\ Sets\ a\ new\ referance\ to\ medium\ of\ music\ track.\r\n\ \r\n\ @param\ \ \ \ \ \ \ mediumContaining.\r\n
-numComments=9
+numComments=7
