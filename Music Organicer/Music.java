@@ -14,7 +14,7 @@ public class Music extends AudioTracks
    private String artist;
    private int date;
    private int timesPlayed;
-   private Medium mediumContaining;
+
    
     
    
@@ -22,14 +22,14 @@ public class Music extends AudioTracks
     /**
      * Constructor for objects of class Music
      */
-    public Music(String title, Duration duration, String artist, int date, int  timesPlayed, Medium mediumContaining)
+    public Music(String title, Duration duration, String artist, int date, int  timesPlayed, Medium medium)
     {   
-        super(title, duration);
+        super(title, duration, medium);
         this.duration = duration;
         this.artist = artist;
         this.date = date;
         this.timesPlayed = timesPlayed;
-        this.mediumContaining = mediumContaining;
+   
         
         
     }
@@ -100,20 +100,7 @@ public class Music extends AudioTracks
      * 
      * @return      mediumContaining.
      */
-    public Medium getMediumContaining() 
-    {
-        return mediumContaining;
-    }
-
-    /**
-     * Sets a new referance to medium of music track.
-     * 
-     * @param       mediumContaining.
-     */
-    public void setMediumContaining(Medium mediumContaining) 
-    {
-        this.mediumContaining = mediumContaining;
-    }
+   
 
     
   

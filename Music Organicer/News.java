@@ -13,9 +13,9 @@ public class News extends AudioTracks
     /**
      * Constructor for objects of class News
      */
-    public News(String title, Duration duration )
+    public News(String title, Duration duration, Medium medium )
     {   
-        super(title, duration);
+        super(title, duration, medium);
         
         
     }

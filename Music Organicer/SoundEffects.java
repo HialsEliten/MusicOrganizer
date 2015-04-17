@@ -14,9 +14,9 @@ public class SoundEffects extends AudioTracks
     /**
      * Constructor for objects of class SoundEffects
      */
-    public SoundEffects(String title, Duration duration, String description )
+    public SoundEffects(String title, Duration duration, String description,  Medium medium )
     {   
-        super(title, duration);
+        super(title, duration, medium);
         
         
     }
