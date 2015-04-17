@@ -1,13 +1,38 @@
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.ArrayList;
 
 /**
  *
  * @author Olav Rune
  */
 public class AudioTracksArchive {
+
+    private ArrayList<AudioTracks> tracks;
     
+    
+    
+    /**
+     * 
+     */
+    public AudioTracksArchive() {
+
+        tracks = new ArrayList<>();
+
+    }
+    
+    /**
+     * 
+     * 
+     */
+    public void addTrack(AudioTracks track)
+    {
+        tracks.add(track);
+        
+    }
+    
+    public void removeTrack(AudioTracks track)
+    {
+        tracks.add(track);
+               
+    }
+
 }
