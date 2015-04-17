@@ -2,31 +2,57 @@ import java.time.Duration;
 /**
  * Write a description of class AdvertisingJingle here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @NumTek Solutions 
+ * @17.04.15
  */
 public class AdvertisingJingle extends AudioTrack
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String product;
+    private String company;
+    
+    
 
     /**
      * Constructor for objects of class AdvertisingJingle
      */
-    public AdvertisingJingle(String title, Duration duration,  Medium medium )
+    public AdvertisingJingle(String title, Duration duration,  Medium medium, String product, String company)
     {   
         super(title, duration, medium);  
+        this.company = company;
+        this.product = product;
+    }
+    /**
+     * get the product been adverticed
+     * @return product
+     */
+    public String getProduct() {
+        return product;
     }
     
-
     /**
-     * An example of a method - replace this comment with your own
+     * set the product been adverticed
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param product
      */
-    public int sampleMethod(int y)
-    {
-        return x + y;
+    public void setProduct(String product) {
+        this.product = product;
     }
+    
+    /**
+     * get the company paying for the advertise
+     * @return company
+     */
+    public String getCompany() {
+        return company;
+    }
+    
+    /**
+     * set the company paying for the advertice
+     * @param company 
+     */
+    public void setCompany(String company) {
+        this.company = company;
+    }
+    
 }

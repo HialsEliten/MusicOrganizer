@@ -4,8 +4,8 @@ import java.time.Duration;
 /**
  * Write a description of class Music here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Olav
+ * @17.04.15
  */
 public class Music extends AudioTrack
 {

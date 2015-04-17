@@ -3,13 +3,13 @@ import java.time.Duration;
 /**
  * Write a description of class SoundEffects here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Olav, såklart 
+ * @17.04.15
  */
 public class SoundEffects extends AudioTrack
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private String description;
     
 
     /**
@@ -18,19 +18,24 @@ public class SoundEffects extends AudioTrack
     public SoundEffects(String title, Duration duration, String description,  Medium medium )
     {   
         super(title, duration, medium);
+        this.description = description;
         
         
+    }
+    /**
+     * return the description of the sound effect
+     * @return descrition
+     */
+    public String getDescription() {
+        return description;
+    }
+    /**
+     * change the description of the sound effect
+     * @param description 
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }
