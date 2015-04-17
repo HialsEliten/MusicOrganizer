@@ -1,4 +1,5 @@
 
+import java.time.Duration;
 import java.util.ArrayList;
 
 /**
@@ -10,11 +11,24 @@ public class TrackOrganizer {
 
     // Initializing variables
     private AudioTrackArchive trackArchive;
+    private MediumArchive mediumArchive;
 
     // Constructor for TrackOrganizer
     public TrackOrganizer() {
         // Assigning variables
         trackArchive = new AudioTrackArchive();
+        mediumArchive = new MediumArchive();
+    }
+    
+    public void etellerannet()
+    {
+        String title = "Thriller";
+        // "Pleas provide name of artist"...
+        
+        String artist = "Mikkel Jækkson";
+        
+        
+        //this.addCD(title, artist, releaseYear, artist, duration, archiveNumber);
     }
 
     /**
@@ -23,6 +37,7 @@ public class TrackOrganizer {
      * @param audioTrack audio track you want to add
      */
     public void addTrack(AudioTrack track) {
+        
         this.trackArchive.addTrack(track);
     }
 
@@ -34,6 +49,20 @@ public class TrackOrganizer {
     public void removeTrack(AudioTrack track) {
         this.trackArchive.removeTrack(track);
     }
+    public void addCD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
+    {
+       CD cd = new CD( title,  artist,  releaseYear,  recordLabel,  duration,  archiveNumber);
+       mediumArchive.addMedium(cd);
+       
+       
+       
+    }
+    public void addMusicTrackToCD (String title, Duration duration, String artist, int date, int  timesPlayed, Medium medium)
+    {
+       Music music = new Music(title, duration, artist, date, timesPlayed, medium);
+       trackArchive.addTrack(music);
+    }
+    
     
     
 }
