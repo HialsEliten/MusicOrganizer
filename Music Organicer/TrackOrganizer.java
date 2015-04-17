@@ -24,4 +24,5 @@ public class TrackOrganizer {
     public void addTrack(AudioTrack track) {
         this.tracks.add(track);
     }
+}
     

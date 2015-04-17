@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Tape extends ArchivedMedium
 {
-    private ArrayList<AudioTracks> tapeTracks;
+    private ArrayList<AudioTrack> tapeTracks;
     String type;
     
 
@@ -19,7 +19,7 @@ public class Tape extends ArchivedMedium
     {
         super(title);
         this.type = type;
-        tapeTracks = new ArrayList<AudioTracks>();
+        tapeTracks = new ArrayList<AudioTrack>();
         
         
         
@@ -30,7 +30,7 @@ public class Tape extends ArchivedMedium
      * Add a track to the end of the tracklist. 
      * @param track
      */
-    public void addTrack(AudioTracks track)
+    public void addTrack(AudioTrack track)
     {
         tapeTracks.add(track);
     }

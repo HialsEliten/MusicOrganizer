@@ -6,7 +6,7 @@ import java.util.ArrayList;
  */
 public class AudioTracksArchive {
 
-    private ArrayList<AudioTracks> tracks;
+    private ArrayList<AudioTrack> tracks;
     
     
     
@@ -23,13 +23,13 @@ public class AudioTracksArchive {
      * 
      * 
      */
-    public void addTrack(AudioTracks track)
+    public void addTrack(AudioTrack track)
     {
         tracks.add(track);
         
     }
     
-    public void removeTrack(AudioTracks track)
+    public void removeTrack(AudioTrack track)
     {
         tracks.add(track);
                

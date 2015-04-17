@@ -5,7 +5,7 @@ import java.time.Duration;
  * @HialsEliten
  * @10.04.15
  */
-public class AudioTracks
+public class AudioTrack
 {
     // instance variables
     private String title;
@@ -14,9 +14,9 @@ public class AudioTracks
     private Medium medium;
 
     /**
-     * Constructor for objects of class AudioTracks
+     * Constructor for objects of class AudioTrack
      */
-    public AudioTracks(String title, Duration duration, Medium medium)
+    public AudioTrack(String title, Duration duration, Medium medium)
     {
         this.title = title;
         //this.duration;
