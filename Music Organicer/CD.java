@@ -5,7 +5,7 @@ import java.time.Duration;
  * @Kelvin
  * @15.04.15
  */
-public class CD extends ArchivedMedium
+public class CD extends Medium
 {
     // instance variables - replace the example below with your own
     private String artist;

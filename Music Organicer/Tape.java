@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @Olav
  * @15.04.15
  */
-public class Tape extends ArchivedMedium
+public class Tape extends Medium
 {
     private ArrayList<AudioTrack> tapeTracks;
     String type;

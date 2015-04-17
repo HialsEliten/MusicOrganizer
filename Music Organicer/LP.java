@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LP extends ArchivedMedium
+public class LP extends Medium
 {
     // instance variables - replace the example below with your own
     private String artist;
