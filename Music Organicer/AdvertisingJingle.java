@@ -16,7 +16,7 @@ public class AdvertisingJingle extends AudioTrack
     /**
      * Constructor for objects of class AdvertisingJingle
      */
-    public AdvertisingJingle(String title, Duration duration,  Medium medium, String product, String company)
+    public AdvertisingJingle(String title, long duration,  Medium medium, String product, String company)
     {   
         super(title, duration, medium);  
         this.company = company;

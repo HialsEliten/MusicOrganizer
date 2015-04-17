@@ -16,10 +16,11 @@ public class AudioTrack
     /**
      * Constructor for objects of class AudioTrack
      */
-    public AudioTrack(String title, Duration duration, Medium medium)
+    public AudioTrack(String title, long seconds, Medium medium)
     {
         this.title = title;
         this.medium = medium;
+        duration = Duration.ofSeconds(seconds);
         //this.duration;
     }
 

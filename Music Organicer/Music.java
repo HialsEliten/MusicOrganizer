@@ -22,10 +22,12 @@ public class Music extends AudioTrack
     /**
      * Constructor for objects of class Music
      */
-    public Music(String title, Duration duration, String artist, int date, int  timesPlayed, Medium medium)
+    public Music(String title, long seconds, String artist, int date, int  timesPlayed, Medium medium)
     {   
-        super(title, duration, medium);
-        this.duration = duration;
+                
+        super(title, seconds, medium);
+        
+        //this.duration = duration;
         this.artist = artist;
         this.date = date;
         this.timesPlayed = timesPlayed;

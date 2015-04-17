@@ -17,7 +17,7 @@ public class News extends AudioTrack
     /**
      * Constructor for objects of class News
      */
-    public News(String title, Duration duration, Medium medium, String story, String journalist, int dateProduced, int dateBroadcasted)
+    public News(String title, long duration, Medium medium, String story, String journalist, int dateProduced, int dateBroadcasted)
     {   
           super(title, duration, medium);
           this.story = story;

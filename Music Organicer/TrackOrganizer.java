@@ -49,6 +49,7 @@ public class TrackOrganizer {
     public void removeTrack(AudioTrack track) {
         this.trackArchive.removeTrack(track);
     }
+    
     public void addCD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
     {
        CD cd = new CD( title,  artist,  releaseYear,  recordLabel,  duration,  archiveNumber);
@@ -57,7 +58,7 @@ public class TrackOrganizer {
        
        
     }
-    public void addMusicTrackToCD (String title, Duration duration, String artist, int date, int  timesPlayed, Medium medium)
+    public void addMusicTrackToCD (String title, long duration, String artist, int date, int  timesPlayed, Medium medium)
     {
        Music music = new Music(title, duration, artist, date, timesPlayed, medium);
        trackArchive.addTrack(music);
