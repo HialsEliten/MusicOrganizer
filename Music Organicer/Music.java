@@ -17,7 +17,7 @@ public class Music extends AudioTracks
     /**
      * Constructor for objects of class Music
      */
-    public Music(String title, Duration duration, String artist)
+    public Music(String title, Duration duration, String artist, int date, int  timesPlayed, String mediumContaining)
     {   
         super(title, duration);
         
