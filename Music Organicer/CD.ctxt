@@ -26,6 +26,10 @@ comment7.params=
 comment7.target=int\ getDuration()
 comment8.params=duration
 comment8.target=void\ setDuration(int)
+<<<<<<< HEAD
 comment9.params=
 comment9.target=int\ getArchiveNumber()
 numComments=11
+=======
+numComments=9
+>>>>>>> origin/master
