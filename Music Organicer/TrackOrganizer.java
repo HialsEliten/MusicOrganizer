@@ -18,17 +18,22 @@ public class TrackOrganizer {
         // Assigning variables
         trackArchive = new AudioTrackArchive();
         mediumArchive = new MediumArchive();
+        makeFirstTrack();
+
     }
-    
-    public void etellerannet()
-    {
+
+    public void makeFirstTrack() {
+        addCD("Sanger","knut",2001,"HaramStudio",432,65);
+        Medium enRandomCd = mediumArchive.getMediumAt(65);
+        
         String title = "Thriller";
-        // "Pleas provide name of artist"...
-        
+        long duration = 12;
+        int date = 32;
+        int timesPlayed = 2;
+     
         String artist = "Mikkel Jækkson";
-        
-        
-        //this.addCD(title, artist, releaseYear, artist, duration, archiveNumber);
+        addMusicTrackToCD(title, duration, artist, date, timesPlayed, enRandomCd);
+
     }
 
     /**
@@ -37,7 +42,7 @@ public class TrackOrganizer {
      * @param audioTrack audio track you want to add
      */
     public void addTrack(AudioTrack track) {
-        
+
         this.trackArchive.addTrack(track);
     }
 
@@ -49,35 +54,30 @@ public class TrackOrganizer {
     public void removeTrack(AudioTrack track) {
         this.trackArchive.removeTrack(track);
     }
-    
-    public int getNumberOfTracks(){
+
+    public int getNumberOfTracks() {
         return this.trackArchive.getNumberOfTracks();
     }
+
     /**
      * Return a AudioTrack
-     * 
+     *
      * @param index
-     * @return track at specified position 
+     * @return track at specified position
      */
-    public AudioTrack getTrackAt(int index)
-    {
+    public AudioTrack getTrackAt(int index) {
         return trackArchive.getTrackAt(index);
     }
-    
-    public void addCD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
-    {
-       CD cd = new CD( title,  artist,  releaseYear,  recordLabel,  duration,  archiveNumber);
-       mediumArchive.addMedium(cd);
-       
-       
-       
+
+    public void addCD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber) {
+        CD cd = new CD(title, artist, releaseYear, recordLabel, duration, archiveNumber);
+        mediumArchive.addMedium(cd);
+
     }
-    public void addMusicTrackToCD (String title, long duration, String artist, int date, int  timesPlayed, Medium medium)
-    {
-       Music music = new Music(title, duration, artist, date, timesPlayed, medium);
-       trackArchive.addTrack(music);
+
+    public void addMusicTrackToCD(String title, long duration, String artist, int date, int timesPlayed, Medium medium) {
+        Music music = new Music(title, duration, artist, date, timesPlayed, medium);
+        trackArchive.addTrack(music);
     }
-    
-    
-    
+
 }

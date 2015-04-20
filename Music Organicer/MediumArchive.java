@@ -50,6 +50,10 @@ public class MediumArchive
     {
         return this.mediumArchive;
     }
+    public Medium getMediumAt(int index)
+    {
+        return mediumArchive.get(index);
+    }
     
     
 }
