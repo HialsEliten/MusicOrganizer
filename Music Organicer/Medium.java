@@ -17,5 +17,10 @@ public class Medium
     {
         this.title = title;
     }
+    public String getTypeOfMedium()
+    {
+        return null;
+    }
+    
 
 }

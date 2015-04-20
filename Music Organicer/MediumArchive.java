@@ -50,9 +50,20 @@ public class MediumArchive
     {
         return this.mediumArchive;
     }
+    
     public Medium getMediumAt(int index)
     {
-        return mediumArchive.get(index);
+         Medium returnMedia = null;
+        for(Medium media : mediumArchive)
+        {
+           int archiveNumb =  ((CD)media).getArchiveNumber();
+           if(archiveNumb == index)
+           {
+               returnMedia = media;
+           }
+                    
+        }
+       return returnMedia;
     }
     
     

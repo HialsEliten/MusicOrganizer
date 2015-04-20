@@ -24,6 +24,7 @@ public class CD extends Medium
         super(title);
         this.artist = artist;
         this.releaseYear = releaseYear;
+        this.recordLabel = recordLabel;
         this.archiveNumber = archiveNumber;
         this.duration = duration;
     }
@@ -83,6 +84,15 @@ public class CD extends Medium
     public void setDuration(int duration) {
         this.duration = duration;
     }
+
+    public int getArchiveNumber() {
+        return archiveNumber;
+    }
+
+    public void setArchiveNumber(int archiveNumber) {
+        this.archiveNumber = archiveNumber;
+    }
+    
     
     
 }

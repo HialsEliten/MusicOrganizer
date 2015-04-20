@@ -79,5 +79,10 @@ public class TrackOrganizer {
         Music music = new Music(title, duration, artist, date, timesPlayed, medium);
         trackArchive.addTrack(music);
     }
+    
+    public Medium getMediaAt(int index)
+    {
+        return mediumArchive.getMediumAt(index);
+    }
 
 }
