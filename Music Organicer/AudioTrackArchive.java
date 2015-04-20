@@ -38,14 +38,23 @@ public class AudioTrackArchive {
         tracks.remove(track);
                
     }
+    
+    /**
+     * 
+     */
+    public AudioTrack getTrackAt(int index)
+    {
+        return tracks.get(index);
+    }
+    
     /**
      * Get the size of the archive
      * @return number of tracks in the list as an int.
      */
-    public int getArchiveSize()
+    public int getNumberOfTracks()
     {
-        int listSize = tracks.size();
-        return listSize;
+        return tracks.size();
+        
     }
     
 

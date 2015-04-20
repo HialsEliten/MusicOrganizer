@@ -50,6 +50,20 @@ public class TrackOrganizer {
         this.trackArchive.removeTrack(track);
     }
     
+    public int getNumberOfTracks(){
+        return this.trackArchive.getNumberOfTracks();
+    }
+    /**
+     * Return a AudioTrack
+     * 
+     * @param index
+     * @return track at specified position 
+     */
+    public AudioTrack getTrackAt(int index)
+    {
+        return trackArchive.getTrackAt(index);
+    }
+    
     public void addCD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
     {
        CD cd = new CD( title,  artist,  releaseYear,  recordLabel,  duration,  archiveNumber);
