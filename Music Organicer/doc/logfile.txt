@@ -1,6 +1,6 @@
 Class documentation
 <---- javadoc command: ---->
-C:\Program Files (x86)\BlueJ\jdk\bin\javadoc.exe
+C:\PROGRA~1\Java\JDK18~1.0_4\bin\javadoc.exe
 -author
 -version
 -nodeprecated
@@ -27,7 +27,7 @@ C:\Users\Olav Rune\Documents\GitHub\MusicOrganizer\Music Organicer\AudioTrack.ja
 <---- end of javadoc command ---->
 Loading source file C:\Users\Olav Rune\Documents\GitHub\MusicOrganizer\Music Organicer\AudioTrack.java...
 Constructing Javadoc information...
-Standard Doclet version 1.8.0_20
+Standard Doclet version 1.8.0_40
 Building tree for all the packages and classes...
 Generating C:\Users\Olav Rune\Documents\GitHub\MusicOrganizer\Music Organicer\doc\AudioTrack.html...
 C:\Users\Olav Rune\Documents\GitHub\MusicOrganizer\Music Organicer\AudioTrack.java:8: warning - @HialsEliten is an unknown tag.
