@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=title\ duration\ description\ medium
-comment0.target=SoundEffects(java.lang.String,\ long,\ java.lang.String,\ Medium)
+comment0.params=title\ minutes\ seconds\ description\ medium
+comment0.target=SoundEffects(java.lang.String,\ long,\ long,\ java.lang.String,\ Medium)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ SoundEffects\r\n
 comment1.params=
 comment1.target=java.lang.String\ getDescription()

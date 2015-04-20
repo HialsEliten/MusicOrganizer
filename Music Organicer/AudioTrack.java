@@ -19,7 +19,8 @@ public class AudioTrack
     {
         this.title = title;
         this.medium = medium;
-        duration = new DurationHandeling(minutes, seconds);
+        duration = new DurationHandeling();
+        duration.setDuration(minutes, seconds);
         //this.duration;
     }
 

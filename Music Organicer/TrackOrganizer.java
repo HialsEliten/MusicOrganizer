@@ -1,5 +1,3 @@
-
-import java.time.Duration;
 import java.util.ArrayList;
 
 /**
@@ -32,7 +30,7 @@ public class TrackOrganizer {
         int timesPlayed = 2;
      
         String artist = "Mikkel Jækkson";
-        addMusicTrackToCD(title, duration, artist, date, timesPlayed, enRandomCd);
+        addMusicTrackToCD(title, minutes, seconds, artist, date, timesPlayed, enRandomCd);
 
     }
 
@@ -75,8 +73,8 @@ public class TrackOrganizer {
 
     }
 
-    public void addMusicTrackToCD(String title, long duration, String artist, int date, int timesPlayed, Medium medium) {
-        Music music = new Music(title, duration, artist, date, timesPlayed, medium);
+    public void addMusicTrackToCD(String title, long minutes, long seconds, String artist, int date, int timesPlayed, Medium medium) {
+        Music music = new Music(title, minutes, seconds, artist, date, timesPlayed, medium);
         trackArchive.addTrack(music);
     }
     

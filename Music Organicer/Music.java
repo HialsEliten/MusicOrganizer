@@ -1,5 +1,4 @@
 import java.util.*;
-import java.time.Duration;
 
 /**
  * Write a description of class Music here.
@@ -10,7 +9,6 @@ import java.time.Duration;
 public class Music extends AudioTrack
 {
     // instance variables - replace the example below with your own
-   private Duration duration;
    private String artist;
    private int date;
    private int timesPlayed;

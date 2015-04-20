@@ -1,4 +1,3 @@
-import java.time.Duration;
 /**
  * Write a description of class CD here.
  * 
@@ -11,7 +10,6 @@ public class CD extends Medium
     private String artist;
     private int releaseYear;
     private String recordLabel;
-    private int duration;
     private int archiveNumber;
     
     
@@ -19,14 +17,13 @@ public class CD extends Medium
     /**
      * Constructor for objects of class CD
      */
-    public CD(String title, String artist, int releaseYear, String recordLabel, int duration, int archiveNumber)
+    public CD(String title, String artist, int releaseYear, String recordLabel, int archiveNumber)
     {
         super(title);
         this.artist = artist;
         this.releaseYear = releaseYear;
         this.recordLabel = recordLabel;
         this.archiveNumber = archiveNumber;
-        this.duration = duration;
     }
 
     /**
@@ -77,13 +74,13 @@ public class CD extends Medium
         this.recordLabel = recordLabel;
     }
 
-    public int getDuration() {
-        return duration;
-    }
+//     public int getDuration() {
+//         return duration;
+//     }
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
+//     public void setDuration(int duration) {
+//         this.duration = duration;
+//     }
 
     public int getArchiveNumber() {
         return archiveNumber;

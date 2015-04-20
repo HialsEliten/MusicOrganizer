@@ -1,4 +1,4 @@
-import java.time.Duration;
+
 /**
  * Write a description of class News here.
  * 
@@ -17,9 +17,9 @@ public class News extends AudioTrack
     /**
      * Constructor for objects of class News
      */
-    public News(String title, long duration, Medium medium, String story, String journalist, int dateProduced, int dateBroadcasted)
+    public News(String title, long minutes, long seconds, Medium medium, String story, String journalist, int dateProduced, int dateBroadcasted)
     {   
-          super(title, duration, medium);
+          super(title, minutes, seconds, medium);
           this.story = story;
           this.journalist = journalist;
           this.dateProduced = dateProduced;

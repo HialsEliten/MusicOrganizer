@@ -19,10 +19,9 @@ public class DurationHandeling
     /**
      * Constructor for objects of class DurationTesting
      */
-    public DurationHandeling(long min, long sec)
+    public DurationHandeling()
     {
-        setDuration(min, sec);
-  
+        // nothing to do here
     }
 
     /**

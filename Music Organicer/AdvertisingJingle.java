@@ -1,4 +1,4 @@
-import java.time.Duration;
+
 /**
  * Write a description of class AdvertisingJingle here.
  * 
@@ -16,9 +16,9 @@ public class AdvertisingJingle extends AudioTrack
     /**
      * Constructor for objects of class AdvertisingJingle
      */
-    public AdvertisingJingle(String title, long duration,  Medium medium, String product, String company)
+    public AdvertisingJingle(String title, long minutes, long seconds,  Medium medium, String product, String company)
     {   
-        super(title, duration, medium);  
+        super(title, minutes, seconds, medium);  
         this.company = company;
         this.product = product;
     }
