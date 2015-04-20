@@ -19,5 +19,5 @@ comment5.target=int\ getFileSize()
 comment5.text=\r\n\ get\ fileSize\r\n\ @return\ fileSize\r\n
 comment6.params=fileSize
 comment6.target=void\ setFileSize(int)
-comment6.text=\r\n\ Set\ fileSize\r\n\ @param\ fileSize\r\n
+comment6.text=\r\n\ Set\ fileSize\ in\ kB\r\n\ @param\ fileSize\r\n
 numComments=7
