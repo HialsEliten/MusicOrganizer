@@ -8,6 +8,6 @@
  *
  * @author Olav Rune
  */
-public class Jtable {
+public class MainWindow {
     
 }
