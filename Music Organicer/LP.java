@@ -72,20 +72,20 @@ public class LP extends Medium
     public void setRecordLabel(String recordLabel) {
         this.recordLabel = recordLabel;
     }
-/**
-     * set archive number
-     * @return archiveNumber
-     */
-    public int getArchiveNumber() {
-        return archiveNumber;
-    }
-/**
-     * set the archive number
-     * @param archiveNumber 
-     */
-    public void setArchiveNumber(int archiveNumber) {
-        this.archiveNumber = archiveNumber;
-    }
+    /**
+         * set archive number
+         * @return archiveNumber
+         */
+        public int getArchiveNumber() {
+            return archiveNumber;
+        }
+    /**
+         * set the archive number
+         * @param archiveNumber 
+         */
+        public void setArchiveNumber(int archiveNumber) {
+            this.archiveNumber = archiveNumber;
+        }
     
     
     

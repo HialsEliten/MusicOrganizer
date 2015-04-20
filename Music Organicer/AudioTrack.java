@@ -9,18 +9,17 @@ public class AudioTrack
 {
     // instance variables
     private String title;
-    private Duration duration;
-    private int x;
+    private DurationHandeling duration;
     private Medium medium;
 
     /**
      * Constructor for objects of class AudioTrack
      */
-    public AudioTrack(String title, long seconds, Medium medium)
+    public AudioTrack(String title, long minutes, long seconds, Medium medium)
     {
         this.title = title;
         this.medium = medium;
-        duration = Duration.ofSeconds(seconds);
+        duration = new DurationHandeling(minutes, seconds);
         //this.duration;
     }
 
@@ -35,13 +34,13 @@ public class AudioTrack
     }
     
     /**
-     * Returns the duration of the track
+     * Returns the duration of the track in seconds
      * 
      * @return     duration 
      */
-    public Duration getDuration()
+    public long getDurationSeconds()
     {
-        return duration;
+        return duration.getTotalSeconds();
     }
     
     /**
@@ -69,9 +68,14 @@ public class AudioTrack
      * 
      * @param   newDuration
      */
-    public void setDuration(Duration newDuration)
+    public void setNewDuration(long min, long sec)
     {
-        this.duration = newDuration;
+        this.duration.setDuration(min, sec);
+    }
+    
+    public String getDurationString()
+    {
+        return duration.getDurationString();
     }
     
     /**
