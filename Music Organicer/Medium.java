@@ -30,9 +30,9 @@ public class Medium
      * 
      * @param    track  Track to add (type Track)
      */
-    public void addTrack(int index, AudioTrack track)
+    public void addTrack(AudioTrack track)
     {
-        trackList.add(index, track);
+        trackList.add(track);
     }
         
     /**
