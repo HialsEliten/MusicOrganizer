@@ -74,14 +74,6 @@ public class CD extends Medium
         this.recordLabel = recordLabel;
     }
 
-//     public int getDuration() {
-//         return duration;
-//     }
-
-//     public void setDuration(int duration) {
-//         this.duration = duration;
-//     }
-
     public int getArchiveNumber() {
         return archiveNumber;
     }
