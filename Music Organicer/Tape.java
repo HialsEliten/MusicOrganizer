@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /**
  * Write a description of class Tape here.
@@ -8,7 +7,6 @@ import java.util.ArrayList;
  */
 public class Tape extends Medium
 {
-    private ArrayList<AudioTrack> tapeTracks;
     String type;
     int archiveNumber;
     
@@ -22,33 +20,8 @@ public class Tape extends Medium
         this.type = type;
         this.archiveNumber = archiveNumber;
         
-        tapeTracks = new ArrayList<AudioTrack>();
-        
-        
-        
     }
-    
-    
-    /**
-     * Add a track to the end of the tracklist. 
-     * @param track
-     */
-    public void addTrack(AudioTrack track)
-    {
-        tapeTracks.add(track);
-    }
-    
-    /**
-     * Remove a track from the tape
-     * 
-     * @param trackToRemove
-     */
-    public void removeTrack(AudioTrack trackToRemove)
-    {
-        tapeTracks.remove(trackToRemove);
-        
-    }
-    
+     
     /**
      * get the type of tape
      * @return type

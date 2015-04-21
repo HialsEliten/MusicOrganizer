@@ -25,7 +25,7 @@ public class Medium
         
     }
     
-    /*
+    /**
      * Add a track to the mediums track list
      * 
      * @param    track  Track to add (type Track)
@@ -33,6 +33,7 @@ public class Medium
     public void addTrack(int index, AudioTrack track)
     {
         trackList.add(index, track);
+        
     }
         
     /**
@@ -45,5 +46,22 @@ public class Medium
         return null;
     }
     
+    /**
+     * Returns a string of total time on the medium (Example : "1H2M3S").
+     * 
+     * @return      time 
+     */
+    public String getTotalDurationString()
+    {
+        String returnVal = null;
+        long sec = 0;
+        
+        for(AudioTrack track : trackList)
+        {
+             sec = sec + track.getDurationSeconds();
+        }
+        totalDuration.addSeconds(sec);
+        return totalDuration.getDurationString();        
+    }
 
 }
