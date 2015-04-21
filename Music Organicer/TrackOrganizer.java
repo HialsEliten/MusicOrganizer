@@ -33,7 +33,7 @@ public class TrackOrganizer {
         int archiveNumber = 65;
      
         String artist = "Mikkel Jækkson";
-        addMusicTrackToCD(title, minutes, seconds, artist, date, timesPlayed, archiveNumber);
+        addMusicTrack(title, minutes, seconds, artist, date, timesPlayed, archiveNumber);
 
     }
 
@@ -45,6 +45,7 @@ public class TrackOrganizer {
     public void addTrack(AudioTrack track) {
 
         this.trackArchive.addTrack(track);
+        
     }
 
     /**
@@ -76,7 +77,7 @@ public class TrackOrganizer {
 
     }
 
-    public void addMusicTrackToCD(String title, long minutes, long seconds, String artist, int date, int timesPlayed, int archiveNumber) {
+    public void addMusicTrack(String title, long minutes, long seconds, String artist, int date, int timesPlayed, int archiveNumber) {
         Medium medium  =  mediumArchive.getMediumAt(archiveNumber);
         Music music = new Music(title, minutes, seconds, artist, date, timesPlayed, medium);
         // - - - - - - - - - -AudiTrack track = trackArchive.getTrack(music); - - - - -- - - - - - - - - - - - - - - - - 
