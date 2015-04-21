@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Medium here.
@@ -11,6 +12,7 @@ public class Medium
     // instance variables - replace the example below with your own
     private String title;
     private DurationHandeling totalDuration;
+    private ArrayList<AudioTrack> trackList;
 
     /**
      * Constructor for objects of class Medium
@@ -19,9 +21,20 @@ public class Medium
     {
         this.title = title;
         totalDuration = new DurationHandeling();
+        trackList = new ArrayList<AudioTrack>();
+        
     }
     
-    
+    /*
+     * Add a track to the mediums track list
+     * 
+     * @param    track  Track to add (type Track)
+     */
+    public void addTrack(int index, AudioTrack track)
+    {
+        trackList.add(index, track);
+    }
+        
     /**
      * 
      *

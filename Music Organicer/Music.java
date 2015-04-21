@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Write a description of class Music here.
  * 
- * @Olav
+ * @Kelvin
  * @17.04.15
  */
 public class Music extends AudioTrack
