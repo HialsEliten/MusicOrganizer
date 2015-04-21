@@ -41,6 +41,17 @@ public class MediumArchive
         this.mediumArchive.remove(mediumToRemove);
     }
     
+    public void removeMedium(int archiveNumber) {
+    
+        Medium mediumToRemove = getMediumAt(archiveNumber);
+        if(mediumToRemove != null) {
+        removeMedium(mediumToRemove);
+        }
+        else  {
+            System.out.println("The medium does not exist, fuckface");
+        }
+    }
+    
     /**
      * Return archive list
      * 
