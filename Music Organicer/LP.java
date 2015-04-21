@@ -2,7 +2,7 @@
 /**
  * Write a description of class LP here.
  * 
- * @author (your name) 
+ * @author Stort sett Olav 
  * @version (a version number or a date)
  */
 public class LP extends Medium

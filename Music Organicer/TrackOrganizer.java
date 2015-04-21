@@ -22,7 +22,7 @@ public class TrackOrganizer {
 
     public void makeFirstTrack() {
         addCD("Sanger","knut",2001,"HaramStudio",65);
-        Medium enRandomCd = mediumArchive.getMediumAt(65);
+        //Medium enRandomCd = mediumArchive.getMediumAt(65);
         
         String title = "Thriller";
         long duration = 12;
@@ -30,9 +30,10 @@ public class TrackOrganizer {
         int timesPlayed = 2;
         long minutes = 5;
         long seconds = 24;
+        int archiveNumber = 65;
      
         String artist = "Mikkel Jækkson";
-        addMusicTrackToCD(title, minutes, seconds, artist, date, timesPlayed, enRandomCd);
+        addMusicTrack(title, minutes, seconds, artist, date, timesPlayed, archiveNumber);
 
     }
 
@@ -44,6 +45,7 @@ public class TrackOrganizer {
     public void addTrack(AudioTrack track) {
 
         this.trackArchive.addTrack(track);
+        
     }
 
     /**
@@ -75,10 +77,12 @@ public class TrackOrganizer {
 
     }
 
-    public void addMusicTrackToCD(String title, long minutes, long seconds, String artist, int date, int timesPlayed, Medium medium) {
+    public void addMusicTrack(String title, long minutes, long seconds, String artist, int date, int timesPlayed, int archiveNumber) {
+        Medium medium  =  mediumArchive.getMediumAt(archiveNumber);
         Music music = new Music(title, minutes, seconds, artist, date, timesPlayed, medium);
         // - - - - - - - - - -AudiTrack track = trackArchive.getTrack(music); - - - - -- - - - - - - - - - - - - - - - - 
-        // - - - - - - - - - -mediumArchive.getMedium(medium).addTrack(index, track);- - - - - - - - -  
+        // - - - - - - - - - -mediumArchive.getMedium(medium).addTrac(index, track);-k(index, track);- - - - - - - - -  
+        
         trackArchive.addTrack(music);        
     }
     
