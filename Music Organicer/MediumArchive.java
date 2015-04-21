@@ -36,15 +36,24 @@ public class MediumArchive
      * 
      * @param  mediumToRemove the medium to remove (Medium)
      */
-    public void removeMedium(Medium mediumToRemove)
+    public boolean removeMedium(Medium mediumToRemove)
     {
-        this.mediumArchive.remove(mediumToRemove);
+        boolean removeConfirmation = false;
+      removeConfirmation =  mediumArchive.remove(mediumToRemove);
+      
+      return removeConfirmation;
+        
     }
     
+    /**
+     * Remove the medium at the specific archive number
+     * @param archiveNumber 
+     */
     public void removeMedium(int archiveNumber) {
     
         Medium mediumToRemove = getMediumAt(archiveNumber);
         if(mediumToRemove != null) {
+        removeAllTracksOnMedium(mediumToRemove);
         removeMedium(mediumToRemove);
         }
         else  {
@@ -75,6 +84,11 @@ public class MediumArchive
                     
         }
        return returnMedia;
+    }
+    
+    public void removeAllTracksOnMedium(Medium mediumToRemove)
+    {
+        mediumToRemove.removeAllTracks();
     }
     
     

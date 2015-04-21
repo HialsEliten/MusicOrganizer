@@ -61,6 +61,10 @@ public class DurationHandeling
     {
         totSec += secToAdd;
     }
+    public void removeSeconds(long secToRemove)
+    {
+        totSec -= secToRemove;
+    }
       
 
 

@@ -148,6 +148,7 @@ public class TrackOrganizer {
         if (medium != null) {
             Music music = new Music(title, minutes, seconds, artist, date, timesPlayed, medium);
             trackArchive.addTrack(music);
+            medium.addTrack(music);
         } else {
             System.out.println("The medium does not exist, shitface");
         }

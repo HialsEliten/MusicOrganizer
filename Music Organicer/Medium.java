@@ -33,7 +33,23 @@ public class Medium
     public void addTrack(AudioTrack track)
     {
         trackList.add(track);
+        totalDuration.addSeconds(track.getDurationSeconds());
         
+    }
+    /**
+     * Remove a track from the mediums track list
+     * @param track 
+     */
+    public void removeTrack(AudioTrack track)
+    {
+        trackList.remove(track);
+        totalDuration.removeSeconds(track.getDurationSeconds());
+        
+    }
+    
+    public void removeAllTracks()
+    {
+        trackList.removeAll(trackList);
     }
         
     /**
