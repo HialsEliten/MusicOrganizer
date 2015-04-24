@@ -226,6 +226,15 @@ public class TrackOrganizer {
     public Medium getMediaAt(int index) {
         return mediumArchive.getMediumAt(index);
     }
+    public String listAllTracks()
+    {
+       return trackArchive.listAllTracks();
+    }
+    
+    public void printTest()
+    {
+        System.out.println("PizzaBurger");
+    }
     
 
 }

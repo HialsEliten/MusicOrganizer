@@ -57,5 +57,21 @@ public class AudioTrackArchive {
         
     }
     
+    /**
+     * list all the tracks in the archive by its title
+     * @return String
+     */
+    public String listAllTracks()
+    {
+        String trackList = null; 
+        
+        for(AudioTrack track : tracks)
+        {
+            trackList = trackList + track.getTitle()+(",  ");
+        }
+        return trackList;
+    }
+            
+    
 
 }
