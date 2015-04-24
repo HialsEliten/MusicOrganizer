@@ -8,16 +8,23 @@
 public class DataMain
 {
     // instance variables - replace the example below with your own
-    private int y;
-    private int hore;   
-    
+  
 
     /**
      * Constructor for objects of class DataMain
      */
     public static void main(String[] args)
     {
-        //Data d = new Data();
+         System.out.println("kake2");
+         
+         
+                 
+        TrackOrganizer t = new TrackOrganizer();
+        MainFrame mainPanel = new MainFrame();
+        mainPanel.setVisible(true);
+        System.out.println("kakeSlott");
+        
+        
     }
 
     /**
