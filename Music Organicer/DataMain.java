@@ -14,9 +14,16 @@ public class DataMain {
     /**
      * Constructor for objects of class DataMain
      */
-    public static void main(String[] args) {
+    
+    /**
+    public static void main(String[] args) { 
         
         System.out.println("kakekake");
+        //System.out.println("fds");
+        
+        
+        //System.out.println(" sjokolade ");
+                
         /**
         TrackOrganizer dings = new TrackOrganizer();
         
@@ -28,7 +35,8 @@ public class DataMain {
         * 
         */
 
-    }
+    
+
 
     public void print() {
         System.out.println(" Kaffekopp");
