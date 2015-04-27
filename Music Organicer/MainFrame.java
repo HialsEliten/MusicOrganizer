@@ -14,6 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private TrackOrganizer trackOrganizer;
     private Integer integer;
+    //homopungkakeslott
    
     
     /**
@@ -413,14 +414,12 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-               
         mediumFrame.setSize(200, 300);
         mediumFrame.setVisible(true);
         mediumPanel.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void addCdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCdBtnActionPerformed
-        addCdBtn.setSelected(false);
         cdFrame.setSize(350, 425);
         cdFrame.setVisible(true);
         cdPanel.setVisible(true);
@@ -436,13 +435,10 @@ public class MainFrame extends javax.swing.JFrame {
         }
         catch(NullPointerException e)
         {
-            System.out.println("FEIL");
             cdError.setText("Error with Release Year!");            
         }
         catch(NumberFormatException e)
         {
-            
-            System.out.println("FEIL");
             cdError.setText("Error with Release Year!");
         }
     }//GEN-LAST:event_cdReleaseYearActionPerformed
@@ -470,11 +466,11 @@ public class MainFrame extends javax.swing.JFrame {
        
         trackOrganizer.addCD(cdTitleVar, cdAristVar, cdReleaseYearVar, cdRecordLabelVar, cdArchiveNumberVar);
         cdError.setText("Cd added! " + "Title: " + cdTitle.getText() + " Artist: "+ cdArtist.getText());
-        cdTitle.setText(null);
-        cdArtist.setText(null);
-        cdArchiveNumber.setText(null);
-        cdRecordLabel.setText(null);
-        cdReleaseYear.setText(null);
+        cdTitle.setText("");
+        cdArtist.setText("");
+        cdArchiveNumber.setText("");
+        cdRecordLabel.setText("");
+        cdReleaseYear.setText("");
         
         
         
@@ -483,7 +479,6 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addTapeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTapeBtnActionPerformed
-        addTapeBtn.setSelected(false);
         tapeFrame.setSize(250,300);
         tapePanel.setVisible(true);
         tapeFrame.setVisible(true);

@@ -104,7 +104,6 @@ public class MainFrameOlav extends javax.swing.JFrame {
         
         PopUp dialog = new PopUp(this, true);
         dialog.setVisible(true);
-        dialog.getCdTitle();
         
         
    
