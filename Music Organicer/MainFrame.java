@@ -26,7 +26,12 @@ public class MainFrame extends javax.swing.JFrame {
     private String cdRecordLabelVar;
     private int cdArchiveNumberVar;
     //*******************************
-    
+    //*********Tape Variables********
+    private String tapeTitleVar;
+    private boolean tapeDigitalBtnVar;
+    private boolean tapeAnalogBtnVar;
+    private int tapeArchiveNumberVar;
+    //*******************************
     
     
     
@@ -63,17 +68,17 @@ public class MainFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         cdError = new javax.swing.JLabel();
         tapeFrame = new javax.swing.JFrame();
-        jPanel1 = new javax.swing.JPanel();
+        tapePanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
+        addTape = new javax.swing.JButton();
+        tapeArchiveNumber = new javax.swing.JTextField();
+        tapeTitle = new javax.swing.JTextField();
+        tapeAnalogBtn = new javax.swing.JRadioButton();
+        tapeDigitalBtn = new javax.swing.JRadioButton();
+        tapeError = new javax.swing.JLabel();
+        mediumFrame = new javax.swing.JFrame();
         mediumPanel = new javax.swing.JPanel();
-        closeMediumPanel = new javax.swing.JToggleButton();
         addCdBtn = new javax.swing.JToggleButton();
         addTapeBtn = new javax.swing.JToggleButton();
         addLpBtn = new javax.swing.JToggleButton();
@@ -217,99 +222,100 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel7.setText("Archive Number:");
 
-        jButton2.setText("Add Tape");
-
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
-        jRadioButton1.setText("Analog");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        addTape.setText("Add Tape");
+        addTape.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                addTapeActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("Digital");
+        tapeArchiveNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tapeArchiveNumberActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setText("jLabel8");
+        tapeTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tapeTitleActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        tapeAnalogBtn.setText("Analog");
+        tapeAnalogBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tapeAnalogBtnActionPerformed(evt);
+            }
+        });
+
+        tapeDigitalBtn.setText("Digital");
+        tapeDigitalBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tapeDigitalBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout tapePanelLayout = new javax.swing.GroupLayout(tapePanel);
+        tapePanel.setLayout(tapePanelLayout);
+        tapePanelLayout.setHorizontalGroup(
+            tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tapePanelLayout.createSequentialGroup()
+                .addGroup(tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tapePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(tapeError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tapePanelLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(addTape))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tapePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tapeArchiveNumber))
+                    .addGroup(tapePanelLayout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(jLabel1)
                         .addGap(39, 39, 39)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(tapeTitle))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tapePanelLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jRadioButton2)
+                        .addComponent(tapeDigitalBtn)
                         .addGap(29, 29, 29)
-                        .addComponent(jRadioButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8)))
+                        .addComponent(tapeAnalogBtn)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        tapePanelLayout.setVerticalGroup(
+            tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tapePanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tapeTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
+                .addGroup(tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tapeDigitalBtn)
+                    .addComponent(tapeAnalogBtn))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(tapePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tapeArchiveNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(addTape)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addComponent(tapeError, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout tapeFrameLayout = new javax.swing.GroupLayout(tapeFrame.getContentPane());
         tapeFrame.getContentPane().setLayout(tapeFrameLayout);
         tapeFrameLayout.setHorizontalGroup(
             tapeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tapeFrameLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(182, Short.MAX_VALUE))
+            .addComponent(tapePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         tapeFrameLayout.setVerticalGroup(
             tapeFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tapeFrameLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(tapePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        closeMediumPanel.setText("Close");
-        closeMediumPanel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                closeMediumPanelActionPerformed(evt);
-            }
-        });
 
         addCdBtn.setText("Add CD");
         addCdBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -340,16 +346,12 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(addLpBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addHdBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addCdBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(292, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mediumPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(closeMediumPanel))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         mediumPanelLayout.setVerticalGroup(
             mediumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mediumPanelLayout.createSequentialGroup()
-                .addComponent(closeMediumPanel)
-                .addGap(17, 17, 17)
+                .addGap(40, 40, 40)
                 .addComponent(addCdBtn)
                 .addGap(18, 18, 18)
                 .addComponent(addTapeBtn)
@@ -357,8 +359,31 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(addLpBtn)
                 .addGap(18, 18, 18)
                 .addComponent(addHdBtn)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout mediumFrameLayout = new javax.swing.GroupLayout(mediumFrame.getContentPane());
+        mediumFrame.getContentPane().setLayout(mediumFrameLayout);
+        mediumFrameLayout.setHorizontalGroup(
+            mediumFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 165, Short.MAX_VALUE)
+            .addGroup(mediumFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mediumFrameLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(mediumPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(19, Short.MAX_VALUE)))
+        );
+        mediumFrameLayout.setVerticalGroup(
+            mediumFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 255, Short.MAX_VALUE)
+            .addGroup(mediumFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mediumFrameLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(mediumPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(29, Short.MAX_VALUE)))
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jToggleButton1.setText("Click to create medium");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -373,8 +398,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToggleButton1)
-                .addGap(10, 10, 10)
-                .addComponent(mediumPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,19 +406,16 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jToggleButton1)
                 .addGap(260, 307, Short.MAX_VALUE))
-            .addComponent(mediumPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        mediumFrame.setSize(200, 300);
+        mediumFrame.setVisible(true);
         mediumPanel.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
-
-    private void closeMediumPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeMediumPanelActionPerformed
-        mediumPanel.setVisible(false);
-    }//GEN-LAST:event_closeMediumPanelActionPerformed
 
     private void addCdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCdBtnActionPerformed
         cdFrame.setSize(350, 425);
@@ -443,12 +464,52 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addTapeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTapeBtnActionPerformed
-        
+        tapeFrame.setSize(250,300);
+        tapePanel.setVisible(true);
+        tapeFrame.setVisible(true);
     }//GEN-LAST:event_addTapeBtnActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void tapeAnalogBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tapeAnalogBtnActionPerformed
+        tapeAnalogBtnVar = true;
+        tapeDigitalBtnVar = false;
+        tapeAnalogBtn.setSelected(true);
+        tapeDigitalBtn.setSelected(false);
+    }//GEN-LAST:event_tapeAnalogBtnActionPerformed
+
+    private void tapeTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tapeTitleActionPerformed
+        this.tapeTitleVar = tapeTitle.getText();
+    }//GEN-LAST:event_tapeTitleActionPerformed
+
+    private void tapeArchiveNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tapeArchiveNumberActionPerformed
+        String tempString = tapeArchiveNumber.getText();
+        this.tapeArchiveNumberVar = integer.parseInt(tempString);
+    }//GEN-LAST:event_tapeArchiveNumberActionPerformed
+
+    private void tapeDigitalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tapeDigitalBtnActionPerformed
+        tapeAnalogBtnVar = false;
+        tapeDigitalBtnVar = true;
+        tapeAnalogBtn.setSelected(false);
+        tapeDigitalBtn.setSelected(true);
+    }//GEN-LAST:event_tapeDigitalBtnActionPerformed
+
+    private void addTapeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTapeActionPerformed
+        String digitalOrAnalog = "";
+        if((tapeAnalogBtnVar == true)&&(tapeDigitalBtnVar == false))
+        {
+            digitalOrAnalog = "Analog";
+        }
+        if((tapeAnalogBtnVar == false)&&(tapeDigitalBtnVar == true))
+        {
+            digitalOrAnalog = "Digital";
+        }
+        trackOrganizer.addTape(tapeTitleVar, digitalOrAnalog, tapeArchiveNumberVar);
+        tapeError.setText("Tape Added! " + "Title: " + tapeTitle.getText() + "  Type: " + digitalOrAnalog);
+        
+        tapeTitle.setText("");
+        tapeDigitalBtn.setSelected(false);
+        tapeAnalogBtn.setSelected(false);
+        tapeArchiveNumber.setText("");
+    }//GEN-LAST:event_addTapeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,6 +551,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JToggleButton addCdBtn;
     private javax.swing.JToggleButton addHdBtn;
     private javax.swing.JToggleButton addLpBtn;
+    private javax.swing.JButton addTape;
     private javax.swing.JToggleButton addTapeBtn;
     private javax.swing.JTextField cdArchiveNumber;
     private javax.swing.JTextField cdArtist;
@@ -499,9 +561,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField cdRecordLabel;
     private javax.swing.JTextField cdReleaseYear;
     private javax.swing.JTextField cdTitle;
-    private javax.swing.JToggleButton closeMediumPanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -509,14 +569,15 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JFrame mediumFrame;
     private javax.swing.JPanel mediumPanel;
+    private javax.swing.JRadioButton tapeAnalogBtn;
+    private javax.swing.JTextField tapeArchiveNumber;
+    private javax.swing.JRadioButton tapeDigitalBtn;
+    private javax.swing.JLabel tapeError;
     private javax.swing.JFrame tapeFrame;
+    private javax.swing.JPanel tapePanel;
+    private javax.swing.JTextField tapeTitle;
     // End of variables declaration//GEN-END:variables
 }
