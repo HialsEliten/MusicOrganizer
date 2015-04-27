@@ -41,7 +41,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="addCdBtn" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                       <Component id="jLabel6" max="32767" attributes="0"/>
                                       <Component id="jLabel5" max="32767" attributes="0"/>
@@ -100,7 +100,7 @@
                           <Component id="cdArchiveNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="addCdBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="24" max="32767" attributes="0"/>
                       <Component id="cdError" min="-2" pref="24" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -174,12 +174,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cdArchiveNumberActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="addCdBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add CD"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCdBtnActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="cdError">
@@ -359,7 +359,7 @@
                           <Component id="addTapeBtn" max="32767" attributes="0"/>
                           <Component id="addLpBtn" alignment="0" max="32767" attributes="0"/>
                           <Component id="addHdBtn" alignment="0" max="32767" attributes="0"/>
-                          <Component id="addCdBtn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="addMediumCdBtn" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
@@ -369,7 +369,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="addCdBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="addMediumCdBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="addTapeBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -382,12 +382,12 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JToggleButton" name="addCdBtn">
+            <Component class="javax.swing.JToggleButton" name="addMediumCdBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add CD"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addCdBtnActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addMediumCdBtnActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JToggleButton" name="addTapeBtn">
@@ -436,7 +436,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="mediumBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="413" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -445,19 +445,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="mediumBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="260" pref="307" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+    <Component class="javax.swing.JToggleButton" name="mediumBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Click to create medium"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mediumBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
