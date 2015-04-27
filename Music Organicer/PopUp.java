@@ -9,6 +9,8 @@
  * @author Olav Rune
  */
 public class PopUp extends javax.swing.JDialog {
+    
+    
 
     /**
      * Creates new form PopUp
@@ -18,6 +20,11 @@ public class PopUp extends javax.swing.JDialog {
         initComponents();
         
   
+    }
+    
+    public String getCdTitle(){
+        
+        return titleText.getText();
     }
 
     /**
@@ -31,7 +38,7 @@ public class PopUp extends javax.swing.JDialog {
 
         jTextField3 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        titleText = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -52,10 +59,10 @@ public class PopUp extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        titleText.setText("jTextField1");
+        titleText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                titleTextActionPerformed(evt);
             }
         });
 
@@ -117,7 +124,7 @@ public class PopUp extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(titleText, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(60, 60, 60))
             .addGroup(layout.createSequentialGroup()
                 .addGap(152, 152, 152)
@@ -129,7 +136,7 @@ public class PopUp extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(titleText, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -151,9 +158,10 @@ public class PopUp extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void titleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titleTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+         
+    }//GEN-LAST:event_titleTextActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
@@ -225,10 +233,10 @@ public class PopUp extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField titleText;
     // End of variables declaration//GEN-END:variables
 }
