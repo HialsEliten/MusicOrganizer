@@ -1,5 +1,5 @@
 import java.lang.Integer;
-
+import java.lang.Exception;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private TrackOrganizer trackOrganizer;
     private Integer integer;
+   
     
     /**
      * Creates new form MainFrame
@@ -426,8 +427,22 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_addCdBtnActionPerformed
 
     private void cdReleaseYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdReleaseYearActionPerformed
+        try
+        {
         String tempString = cdReleaseYear.getText();
         this.cdReleaseYearVar = integer.parseInt(tempString);
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("FEIL");
+            cdError.setText("Error with Release Year!");            
+        }
+        catch(NumberFormatException e)
+        {
+            
+            System.out.println("FEIL");
+            cdError.setText("Error with Release Year!");
+        }
     }//GEN-LAST:event_cdReleaseYearActionPerformed
 
     private void cdArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdArtistActionPerformed
@@ -446,16 +461,18 @@ public class MainFrame extends javax.swing.JFrame {
         String tempString = cdArchiveNumber.getText();
         this.cdArchiveNumberVar = integer.parseInt(tempString);
     }//GEN-LAST:event_cdArchiveNumberActionPerformed
+    
+
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       //(cdTitleVar, cdAristVar, cdReleaseYearVar, cdRecordLabelVar, cdArchiveNumberVar)
+       
         trackOrganizer.addCD(cdTitleVar, cdAristVar, cdReleaseYearVar, cdRecordLabelVar, cdArchiveNumberVar);
         cdError.setText("Cd added! " + "Title: " + cdTitle.getText() + " Artist: "+ cdArtist.getText());
-        cdTitle.setText("");
-        cdArtist.setText("");
-        cdArchiveNumber.setText("");
-        cdRecordLabel.setText("");
-        cdReleaseYear.setText("");
+        cdTitle.setText(null);
+        cdArtist.setText(null);
+        cdArchiveNumber.setText(null);
+        cdRecordLabel.setText(null);
+        cdReleaseYear.setText(null);
         
         
         
