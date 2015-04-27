@@ -18,6 +18,7 @@ public class PopUp extends javax.swing.JDialog {
     public PopUp(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        //fkgjfdskljgkldfgdfsgfdsgdfsg
         
   
     }
