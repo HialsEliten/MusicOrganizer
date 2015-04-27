@@ -1,8 +1,10 @@
+import java.lang.Integer;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+ */ 
 
 /**
  *
@@ -10,11 +12,31 @@
  */
 public class MainFrame extends javax.swing.JFrame {
 
+    private TrackOrganizer trackOrganizer;
+    private Integer integer;
+    
     /**
      * Creates new form MainFrame
+     *     
      */
+    //*******CD Variables***********
+    private String cdTitleVar;
+    private String cdAristVar;
+    private int cdReleaseYearVar;
+    private String cdRecordLabelVar;
+    private int cdArchiveNumberVar;
+    //*******************************
+    
+    
+    
+    
     public MainFrame() {
         initComponents();
+        mediumPanel.setVisible(false);
+        cdPanel.setVisible(false);
+        trackOrganizer = new TrackOrganizer();
+        
+        
     }
 
     /**
@@ -26,38 +48,223 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cdFrame = new javax.swing.JFrame();
+        cdPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        cdTitle = new javax.swing.JTextField();
+        cdArtist = new javax.swing.JTextField();
+        cdReleaseYear = new javax.swing.JTextField();
+        cdRecordLabel = new javax.swing.JTextField();
+        cdArchiveNumber = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        Clearbutton = new javax.swing.JButton();
-        TextField = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        cdError = new javax.swing.JLabel();
+        mediumPanel = new javax.swing.JPanel();
+        closeMediumPanel = new javax.swing.JToggleButton();
+        addCdBtn = new javax.swing.JToggleButton();
+        addTapeBtn = new javax.swing.JToggleButton();
+        addLpBtn = new javax.swing.JToggleButton();
+        addHdBtn = new javax.swing.JToggleButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Title:");
 
-        jButton1.setText("Øl?");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Artist:");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Release Year:");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setText("Record Label:");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setText("Archive Number:");
+
+        cdTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdTitleActionPerformed(evt);
+            }
+        });
+
+        cdArtist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdArtistActionPerformed(evt);
+            }
+        });
+
+        cdReleaseYear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdReleaseYearActionPerformed(evt);
+            }
+        });
+
+        cdRecordLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdRecordLabelActionPerformed(evt);
+            }
+        });
+
+        cdArchiveNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cdArchiveNumberActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Add CD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        Clearbutton.setText("Clear");
-        Clearbutton.addActionListener(new java.awt.event.ActionListener() {
+        javax.swing.GroupLayout cdPanelLayout = new javax.swing.GroupLayout(cdPanel);
+        cdPanel.setLayout(cdPanelLayout);
+        cdPanelLayout.setHorizontalGroup(
+            cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cdPanelLayout.createSequentialGroup()
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cdPanelLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton1)
+                            .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(cdPanelLayout.createSequentialGroup()
+                                    .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(104, 104, 104))))
+                        .addGap(18, 18, 18)
+                        .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cdTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(cdArtist)
+                            .addComponent(cdReleaseYear)
+                            .addComponent(cdRecordLabel)
+                            .addComponent(cdArchiveNumber))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(cdError, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        cdPanelLayout.setVerticalGroup(
+            cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cdPanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cdTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(cdArtist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(cdReleaseYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(cdRecordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(cdPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(cdArchiveNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(cdError, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout cdFrameLayout = new javax.swing.GroupLayout(cdFrame.getContentPane());
+        cdFrame.getContentPane().setLayout(cdFrameLayout);
+        cdFrameLayout.setHorizontalGroup(
+            cdFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 284, Short.MAX_VALUE)
+            .addGroup(cdFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(cdFrameLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(cdPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        cdFrameLayout.setVerticalGroup(
+            cdFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+            .addGroup(cdFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(cdFrameLayout.createSequentialGroup()
+                    .addGap(9, 9, 9)
+                    .addComponent(cdPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        closeMediumPanel.setText("Close");
+        closeMediumPanel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClearbuttonActionPerformed(evt);
+                closeMediumPanelActionPerformed(evt);
             }
         });
 
-        TextField.setText("jTextField1");
-        TextField.addActionListener(new java.awt.event.ActionListener() {
+        addCdBtn.setText("Add CD");
+        addCdBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldActionPerformed(evt);
+                addCdBtnActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Exit");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addTapeBtn.setText("Add Tape");
+        addTapeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addTapeBtnActionPerformed(evt);
+            }
+        });
+
+        addLpBtn.setText("Add LP");
+
+        addHdBtn.setText("Add HD");
+
+        javax.swing.GroupLayout mediumPanelLayout = new javax.swing.GroupLayout(mediumPanel);
+        mediumPanel.setLayout(mediumPanelLayout);
+        mediumPanelLayout.setHorizontalGroup(
+            mediumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mediumPanelLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(mediumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(addTapeBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addLpBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addHdBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addCdBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mediumPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(closeMediumPanel))
+        );
+        mediumPanelLayout.setVerticalGroup(
+            mediumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mediumPanelLayout.createSequentialGroup()
+                .addComponent(closeMediumPanel)
+                .addGap(17, 17, 17)
+                .addComponent(addCdBtn)
+                .addGap(18, 18, 18)
+                .addComponent(addTapeBtn)
+                .addGap(18, 18, 18)
+                .addComponent(addLpBtn)
+                .addGap(18, 18, 18)
+                .addComponent(addHdBtn)
+                .addContainerGap(175, Short.MAX_VALUE))
+        );
+
+        jToggleButton1.setText("Click to create medium");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
             }
         });
 
@@ -66,61 +273,84 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Clearbutton)
-                        .addGap(18, 18, 18)
-                        .addComponent(TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(jToggleButton1)
+                .addGap(10, 10, 10)
+                .addComponent(mediumPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Clearbutton)
-                    .addComponent(TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(46, 46, 46)
-                .addComponent(jButton3)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addComponent(jToggleButton1)
+                .addGap(260, 307, Short.MAX_VALUE))
+            .addComponent(mediumPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        mediumPanel.setVisible(true);
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void closeMediumPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeMediumPanelActionPerformed
+        mediumPanel.setVisible(false);
+    }//GEN-LAST:event_closeMediumPanelActionPerformed
+
+    private void addCdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCdBtnActionPerformed
+        cdFrame.setSize(350, 425);
+        cdFrame.setVisible(true);
+        cdPanel.setVisible(true);
+//cdFrame.setVisible(true);
+        //cdPanel.setVisible(true);
+    }//GEN-LAST:event_addCdBtnActionPerformed
+
+    private void cdReleaseYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdReleaseYearActionPerformed
+        String tempString = cdReleaseYear.getText();
+        this.cdReleaseYearVar = integer.parseInt(tempString);
+    }//GEN-LAST:event_cdReleaseYearActionPerformed
+
+    private void cdArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdArtistActionPerformed
+        this.cdAristVar = cdArtist.getText();
+    }//GEN-LAST:event_cdArtistActionPerformed
+
+    private void cdTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdTitleActionPerformed
+        cdTitleVar = cdTitle.getText();
+    }//GEN-LAST:event_cdTitleActionPerformed
+
+    private void cdRecordLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdRecordLabelActionPerformed
+        this.cdRecordLabelVar = cdRecordLabel.getText();
+    }//GEN-LAST:event_cdRecordLabelActionPerformed
+
+    private void cdArchiveNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cdArchiveNumberActionPerformed
+        String tempString = cdArchiveNumber.getText();
+        this.cdArchiveNumberVar = integer.parseInt(tempString);
+    }//GEN-LAST:event_cdArchiveNumberActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        System.out.println("kake");
-        TextField.setText("Øl!");
+       //(cdTitleVar, cdAristVar, cdReleaseYearVar, cdRecordLabelVar, cdArchiveNumberVar)
+        trackOrganizer.addCD(cdTitleVar, cdAristVar, cdReleaseYearVar, cdRecordLabelVar, cdArchiveNumberVar);
+        cdError.setText("Cd added! " + "Title: " + cdTitle.getText() + " Artist: "+ cdArtist.getText());
+        cdTitle.setText("");
+        cdArtist.setText("");
+        cdArchiveNumber.setText("");
+        cdRecordLabel.setText("");
+        cdReleaseYear.setText("");
+        
+        
+        
+        
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ClearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearbuttonActionPerformed
-        System.out.println("homopung");
-        TextField.setText(null);
+    private void addTapeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTapeBtnActionPerformed
         
-    }//GEN-LAST:event_ClearbuttonActionPerformed
-
-    private void TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_TextFieldActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
-        System.exit(0);
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_addTapeBtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    /**
+    
     public static void main(String args[]) {
     
         try {
@@ -148,15 +378,32 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-    */
+    
 
 
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Clearbutton;
-    private javax.swing.JTextField TextField;
+    private javax.swing.JToggleButton addCdBtn;
+    private javax.swing.JToggleButton addHdBtn;
+    private javax.swing.JToggleButton addLpBtn;
+    private javax.swing.JToggleButton addTapeBtn;
+    private javax.swing.JTextField cdArchiveNumber;
+    private javax.swing.JTextField cdArtist;
+    private javax.swing.JLabel cdError;
+    private javax.swing.JFrame cdFrame;
+    private javax.swing.JPanel cdPanel;
+    private javax.swing.JTextField cdRecordLabel;
+    private javax.swing.JTextField cdReleaseYear;
+    private javax.swing.JTextField cdTitle;
+    private javax.swing.JToggleButton closeMediumPanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JPanel mediumPanel;
     // End of variables declaration//GEN-END:variables
 }
