@@ -16,9 +16,15 @@ public class MainFrameOlav extends javax.swing.JFrame {
     /**
      * Creates new form MainFrameOlav
      */
+    
+    TrackOrganizer trackOrganizer;
+    
     public MainFrameOlav() {
+        trackOrganizer = new TrackOrganizer();
         initComponents();
         addMediumPanel.setVisible(false);
+        
+       
        
     }
 
@@ -98,6 +104,7 @@ public class MainFrameOlav extends javax.swing.JFrame {
         
         PopUp dialog = new PopUp(this, true);
         dialog.setVisible(true);
+        
        
     }//GEN-LAST:event_addCDActionPerformed
 
