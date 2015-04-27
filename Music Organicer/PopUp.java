@@ -23,8 +23,16 @@ public class PopUp extends javax.swing.JDialog {
     }
     
     public String getCdTitle(){
+        String returnTitle = null;
         
-        return titleText.getText();
+        try {
+            returnTitle  = titleText.getText();
+        } catch (NullPointerException e) {
+            System.out.println("kakeslott");
+        }
+        
+        return returnTitle;
+       
     }
 
     /**
